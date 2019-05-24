@@ -1,2 +1,2 @@
 # MyCMS
-Simple and minimalist CMS made with CodeIgniter.
+Simple and minimalistic CMS made with CodeIgniter.
