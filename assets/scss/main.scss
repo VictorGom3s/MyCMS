@@ -90,6 +90,131 @@ video {
   vertical-align: baseline;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* 
  -------------
 */
+
+/* --------------------------------------- Fonts --------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
+
+
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Cinzel', serif;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 44px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 36px;
+}
+
+h5 {
+  font-size: 32px;
+}
+
+h6 {
+  font-size: 28px;
+}
+
+/* --------------------------------------------------------------- */
+
+/* ------------------------------- Colors -----------------------------------------*/
+  $corPreto: #000;
+  $corBranco: #FFF;
+  $corLaranja: #CC3619;
+  $corBege: #B89361;
+  $corCinza: #B2B4BB;
+  $corBordo: #55283D;
+  $corRoxo: #2D194E;
+  $corAzul: #1738D5;
+  $corCinzaClaro: #D8D9DC;
+
+/* --------------------------------------------------------------- */
+
+body {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Criar função para icon-holder */
+
+.icon-holder {
+  background-color: $corCinzaClaro;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 125px;
+  margin: 0 auto;
+
+  i {
+    font-size: 60px;
+    color: $corLaranja;
+  }  
+}
+
+hr{
+  color: $corLaranja;
+}
+
+aside {
+  width: 25%;  
+  height: 100vh;
+  position: relative;
+  background-color: $corPreto;
+  color: $corBranco;
+  .menu, .footer-menu{
+    padding: 30px;
+  }
+
+  .head-menu {
+    height: 130px;
+    background-color: $corLaranja;
+    text-align: center;
+    line-height: 120px;
+    color: $corBranco;
+  }
+
+  .user-holder {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    p{
+      margin-top: 15px;
+      text-align: center;
+    }
+  }
+
+  .footer-menu{
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+#content {
+  padding: 30px;
+}
