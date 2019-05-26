@@ -47,7 +47,7 @@
       </div>
       <h4>Usuários</h4>
       <p>Administrar usuários do sistema</p>
-      <button class='btn-orange'>Acessar</button>
+      <a href="#" class='btn-orange'>Acessar</a>
     </div>
 
     <div class="card">
@@ -56,7 +56,7 @@
       </div>
       <h4>Cabeçalho</h4>
       <p>Alterar textos e informações do cabeçalho.</p>
-      <button class='btn-orange'>Acessar</button>
+      <a href="#" class='btn-orange'>Acessar</a>
     </div>
 
     <div class="card">
@@ -65,7 +65,7 @@
       </div>
       <h4>Páginas</h4>
       <p>Adicionar e removar páginas do site</p>
-      <button class='btn-orange'>Acessar</button>
+      <a href="#" class='btn-orange'>Acessar</a>
     </div>
 
     <div class="card">
@@ -74,7 +74,7 @@
       </div>
       <h4>Rodapé</h4>
       <p>Alterar textos e informações do rodapé</p>
-      <button class='btn-orange'>Acessar</button>
+      <a href="#" class='btn-orange'>Acessar</a>
     </div>
 
   </section>
