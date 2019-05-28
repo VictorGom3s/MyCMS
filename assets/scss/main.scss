@@ -94,9 +94,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 a {
 	text-decoration: none;
 }
+
 /* 
  -------------
 */
@@ -146,6 +148,7 @@ h6 {
 
 /* ------------------------------- Colors -----------------------------------------*/
 $corPreto: #000;
+$corRoxoEscuro: #0B0910;
 $corBranco: #fff;
 $corLaranja: #cc3619;
 $corBege: #b89361;
@@ -196,15 +199,29 @@ aside {
 	width: 25%;
 	height: 100vh;
 	position: relative;
-	background-color: $corPreto;
+	background-color: $corRoxoEscuro;
 	color: $corCinza;
+
+	a {
+		color: $corCinza;
+	}
+
 	.menu,
 	.footer-menu {
 		padding: 30px 30px 30px 90px;
+
 		ul {
 			list-style: none;
 		}
+
+		i {
+			color: $corLaranja;
+			font-size: 22px;
+			margin-right: 10px;
+			vertical-align: middle;
+		}
 	}
+
 	.menu {
 		li {
 			margin-bottom: 20px;
@@ -222,6 +239,7 @@ aside {
 	.user-holder {
 		margin-top: 40px;
 		margin-bottom: 40px;
+
 		p {
 			margin-top: 15px;
 			text-align: center;
@@ -240,6 +258,7 @@ aside {
 	flex-wrap: wrap;
 	align-content: space-evenly;
 	padding: 30px;
+
 	.card {
 		width: 30%;
 		margin-bottom: 60px;
@@ -248,17 +267,21 @@ aside {
 		color: $corBranco;
 		border-radius: 10px;
 		position: relative;
+
 		h4,
 		p {
 			text-align: center;
 		}
+
 		h4 {
 			margin-top: 20px;
 		}
+
 		.btn-orange {
 			float: right;
 			margin-top: 15px;
 		}
+
 		.icon-holder {
 			margin-top: 30px;
 		}
