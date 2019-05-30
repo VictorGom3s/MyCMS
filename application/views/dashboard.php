@@ -6,12 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MyCMS</title>
   <link rel="stylesheet" href="<?=base_url('assets/css/main.css')?>">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
   <aside>
     <div class='head-menu'>
+      <a href="#" class='btn-menu oculto'>
+        <i class="material-icons">menu</i>
+      </a>
       <h3>MyCMS</h3>
     </div>
 
@@ -24,26 +27,52 @@
     <hr>
     <div class="menu">
       <ul>
-        <li>Usuários</li>
-        <li>Cabeçalho</li>
-        <li>Páginas</li>
-        <li>Rodapé</li>
+        <li>
+          <a href="">
+            <i class="material-icons">person</i>
+            Usuários
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="material-icons">edit</i>
+            Cabeçalho
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="material-icons">insert_drive_file</i>
+            Páginas
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="material-icons">edit</i>
+            Rodapé
+          </a>
+        </li>
       </ul>
-    </div>
-    <hr>
+    </div>    
+
+    <!-- <hr> -->
 
     <div class="footer-menu">
       <ul>
-        <li>Sair</li>
+        <li>
+          <a href="">
+            <i class="material-icons">power_settings_new</i>
+            Sair
+          </a>
+        </li>
       </ul>
-    </div>
+    </div>    
   </aside>
 
   <section id='content' class='content'>
 
     <div class="card">
       <div class="icon-holder">
-        icon
+        <i class="material-icons">person</i>
       </div>
       <h4>Usuários</h4>
       <p>Administrar usuários do sistema</p>
@@ -52,7 +81,7 @@
 
     <div class="card">
       <div class="icon-holder">
-        icon
+        <i class="material-icons">edit</i>
       </div>
       <h4>Cabeçalho</h4>
       <p>Alterar textos e informações do cabeçalho.</p>
@@ -61,7 +90,7 @@
 
     <div class="card">
       <div class="icon-holder">
-        icon
+        <i class="material-icons">insert_drive_file</i>
       </div>
       <h4>Páginas</h4>
       <p>Adicionar e removar páginas do site</p>
@@ -70,7 +99,7 @@
 
     <div class="card">
       <div class="icon-holder">
-        icon
+        <i class="material-icons">edit</i>
       </div>
       <h4>Rodapé</h4>
       <p>Alterar textos e informações do rodapé</p>
@@ -78,5 +107,7 @@
     </div>
 
   </section>
+
+  <script src="<?=base_url('/assets/js/main.js')?>"></script>
 </body>
 </html>

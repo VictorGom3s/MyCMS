@@ -107,6 +107,8 @@ a {
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
 
+
+
 h3,
 h4,
 h5,
@@ -121,27 +123,27 @@ h2 {
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 3rem;
 }
 
 h2 {
-	font-size: 44px;
+	font-size: 2.75rem;
 }
 
 h3 {
-	font-size: 40px;
+	font-size: 2.50rem;
 }
 
 h4 {
-	font-size: 36px;
+	font-size: 2.25rem;
 }
 
 h5 {
-	font-size: 32px;
+	font-size: 2rem;
 }
 
 h6 {
-	font-size: 28px;
+	font-size: 1.75rem;
 }
 
 /* --------------------------------------------------------------- */
@@ -150,7 +152,10 @@ h6 {
 $corPreto: #000;
 $corRoxoEscuro: #0B0910;
 $corBranco: #fff;
+
 $corLaranja: #cc3619;
+$corLaranjaHover: #ee6a50;
+
 $corBege: #b89361;
 $corCinza: #b2b4bb;
 $corBordo: #55283d;
@@ -160,12 +165,20 @@ $corCinzaClaro: #d8d9dc;
 
 /* --------------------------------------------------------------- */
 
+.oculto {
+	display: none;
+}
+
 .btn-orange {
 	padding: 15px 25px;
 	background-color: $corLaranja;
 	border: none;
 	color: $corBranco;
 	font-size: 1rem;
+
+	&:hover {
+		background-color: $corLaranjaHover;
+	}
 }
 
 body {
@@ -187,6 +200,10 @@ body {
 	i {
 		font-size: 60px;
 		color: $corLaranja;
+
+		&:hover {
+			color: $corLaranjaHover;
+		}
 	}
 }
 
@@ -204,6 +221,10 @@ aside {
 
 	a {
 		color: $corCinza;
+
+		&:hover {
+			color: $corLaranja;
+		}
 	}
 
 	.menu,
@@ -219,6 +240,10 @@ aside {
 			font-size: 22px;
 			margin-right: 10px;
 			vertical-align: middle;
+
+			&:hover {
+				color: $corLaranjaHover;
+			}
 		}
 	}
 
@@ -234,7 +259,17 @@ aside {
 		text-align: center;
 		line-height: 120px;
 		color: $corBranco;
+
+		.btn-menu {
+			float: right;
+			margin-right: 15px;
+			color: $corBranco;
+
+			i {}
+
+		}
 	}
+
 
 	.user-holder {
 		margin-top: 40px;
@@ -254,14 +289,14 @@ aside {
 
 #content {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 	align-content: space-evenly;
 	padding: 30px;
 
 	.card {
 		width: 30%;
-		margin-bottom: 60px;
+		margin-bottom: 50px;
 		padding: 30px;
 		background-color: $corRoxo;
 		color: $corBranco;
@@ -284,6 +319,39 @@ aside {
 
 		.icon-holder {
 			margin-top: 30px;
+		}
+	}
+}
+
+
+/* 
+ Mobile
+ */
+
+@media(max-width: "768px") {
+	html {
+		font-size: 14px;
+	}
+
+	aside {
+		width: 90%;
+
+		.menu,
+		.footer-menu {
+			padding-left: 20px;
+			padding-right: 10px;
+
+			i {
+				margin-right: 5px;
+			}
+
+		}
+
+	}
+
+	.card {
+		h4 {
+			font-size: 2rem;
 		}
 	}
 }
