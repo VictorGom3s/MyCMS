@@ -40,7 +40,7 @@
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="#" class="ativo">
             <i class="material-icons">insert_drive_file</i>
             Páginas
           </a>

@@ -165,6 +165,15 @@ $corCinzaClaro: #d8d9dc;
 
 /* --------------------------------------------------------------- */
 
+/* ------------------- Mixins ---------------- */
+
+@mixin icon-holder($w, $h) {
+	width: $w;
+	height: $h;
+}
+
+/* -------------------------------------------- */
+
 .oculto {
 	display: none;
 }
@@ -186,12 +195,8 @@ body {
 	justify-content: flex-start;
 }
 
-/* Criar função para icon-holder */
-
 .icon-holder {
 	background-color: $corCinzaClaro;
-	width: 80px;
-	height: 80px;
 	border-radius: 100%;
 	text-align: center;
 	line-height: 125px;
@@ -227,6 +232,10 @@ aside {
 		}
 	}
 
+	.icon-holder {
+		@include icon-holder(80px, 80px);
+	}
+
 	.menu,
 	.footer-menu {
 		padding: 30px 30px 30px 90px;
@@ -250,7 +259,25 @@ aside {
 	.menu {
 		li {
 			margin-bottom: 20px;
+
+			.ativo {
+				position: relative;
+				z-index: 999;
+
+				&:before {
+					content: " ";
+					background-color: $corRoxo;
+					width: 245px;
+					height: 40px;
+					position: absolute;
+					left: -90px;
+					top: -10px;
+					z-index: -1;
+				}
+			}
 		}
+
+
 	}
 
 	.head-menu {
@@ -293,6 +320,7 @@ aside {
 	flex-wrap: wrap;
 	align-content: space-evenly;
 	padding: 30px;
+	width: 70%;
 
 	.card {
 		width: 30%;
@@ -302,6 +330,15 @@ aside {
 		color: $corBranco;
 		border-radius: 10px;
 		position: relative;
+
+		.icon-holder {
+			@include icon-holder(120px, 120px);
+			line-height: 190px;
+
+			i {
+				font-size: 90px;
+			}
+		}
 
 		h4,
 		p {
@@ -334,7 +371,7 @@ aside {
 	}
 
 	aside {
-		width: 90%;
+		width: 30%;
 
 		.menu,
 		.footer-menu {
@@ -349,9 +386,17 @@ aside {
 
 	}
 
-	.card {
-		h4 {
-			font-size: 2rem;
+	#content {
+		flex-direction: column;
+		align-content: center;
+		width: 70%;
+
+		.card {
+			width: 70%;
+
+			h4 {
+				font-size: 2rem;
+			}
 		}
 	}
 }
