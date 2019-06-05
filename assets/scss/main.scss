@@ -174,6 +174,25 @@ $corCinzaClaro: #d8d9dc;
 
 /* -------------------------------------------- */
 
+body {
+	display: flex;
+	justify-content: flex-start;
+}
+
+section {
+	width: 75%;
+}
+
+.container {
+	margin: 60px;
+	padding: 30px;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+}
+
 .oculto {
 	display: none;
 }
@@ -190,9 +209,20 @@ $corCinzaClaro: #d8d9dc;
 	}
 }
 
-body {
-	display: flex;
-	justify-content: flex-start;
+.btn-orange-outline {
+	float: right;
+	padding: 15px 25px;
+	border: 1px solid $corLaranja;
+	border-radius: 5px;
+	color: $corLaranja;
+	font-size: 1rem;
+
+	&:hover {
+		background-color: $corLaranjaHover;
+		color: $corBranco;
+		border-color: $corLaranjaHover;
+		//make a hover animation
+	}
 }
 
 .icon-holder {
@@ -217,6 +247,22 @@ hr {
 	margin-left: 30px;
 }
 
+.title {
+	position: relative;
+	width: min-content;
+
+	&:after {
+		$width: 110px;
+		content: "";
+		background-color: $corLaranja;
+		width: $width;
+		height: 2px;
+		position: absolute;
+		top: 55px;
+		left: calc(50% - (#{$width} / 2));
+	}
+}
+
 aside {
 	width: 25%;
 	height: 100vh;
@@ -225,10 +271,10 @@ aside {
 	color: $corCinza;
 
 	a {
-		color: $corCinza;
+		color: $corBranco;
 
 		&:hover {
-			color: $corLaranja;
+			color: $corCinzaClaro;
 		}
 	}
 
@@ -239,6 +285,14 @@ aside {
 	.menu,
 	.footer-menu {
 		padding: 30px 30px 30px 90px;
+
+		a {
+			color: $corCinza;
+
+			&:hover {
+				color: $corLaranja;
+			}
+		}
 
 		ul {
 			list-style: none;
@@ -314,7 +368,7 @@ aside {
 	}
 }
 
-#content {
+#cards {
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
@@ -386,7 +440,7 @@ aside {
 
 	}
 
-	#content {
+	#cards {
 		flex-direction: column;
 		align-content: center;
 		width: 70%;
