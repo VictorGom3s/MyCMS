@@ -1,0 +1,40 @@
+<?php $this->load->view('commons/menu'); ?>
+
+<section>
+  <div class="container">
+      <div class="row">
+        <h3 class='title'>Usuários</h3>
+      </div>
+    <div class="wrapper">
+      <a href="#" >Voltar</a>
+
+      <form action="">
+        <div class="labelgroup">
+          <label for="nome">Nome</label>
+          <input type="text" placeholder="Digite seu nome completo" name="nome">
+        </div>
+
+        <div class="labelgroup">
+          <label for="email">E-mail</label>
+          <input type="email" placeholder="Digite seu e-mail" name="email">
+        </div>
+
+        <div class="labelgroup">
+          <label for="senha">Senha</label>
+          <input type="password" placeholder="Digite uma senha de 6 digitos" name="senha">
+        </div>
+
+        <div class="labelgroup">
+          <label for="nivel">Nível</label>
+          <select name="nivel" id="nivel">
+            <option value="">Selecione o nível</option>
+            <option value="adm">Administrador</option>
+            <option value="comum">Comum</option>
+          </select>
+        </div>
+
+        <input type="submit" class="btn-orange" value="Cadastrar">
+      </form>
+    </div>
+  </div>
+</section>

@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <h3 class='title'>Usuários</h3>
-      <a href="#" class='btn-orange-outline'>Novo</a>
+      <a href="<?=base_url('Pages/usersRegister')?>" class='btn-orange-outline'>Novo</a>
     </div> 
 
     <div class="wrapper">

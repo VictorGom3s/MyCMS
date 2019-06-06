@@ -13,4 +13,14 @@ class Pages extends CI_Controller{
     $this->load->view('commons/footer');
   }
 
+  public function usersRegister($id = NULL){
+    if($id != NULL){
+      $data['id'] = $id;
+    }
+
+    $this->load->view('commons/header');
+    $this->load->view('Users/register', (isset($data) && $data) ? $data : '');
+    $this->load->view('commons/footer');
+  }
+
 }
