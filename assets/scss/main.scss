@@ -162,7 +162,7 @@ $corBordo: #55283d;
 $corRoxo: #2d194e;
 $corAzul: #1738d5;
 $corCinzaClaro: #d8d9dc;
-
+$corCinzaTabela:#f6f6f6;
 /* --------------------------------------------------------------- */
 
 /* ------------------- Mixins ---------------- */
@@ -221,7 +221,53 @@ section {
 		background-color: $corLaranjaHover;
 		color: $corBranco;
 		border-color: $corLaranjaHover;
-		//make a hover animation
+		//make an hover animation
+	}
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	color: $corLaranja;
+
+	.dropdown-button {
+		z-index: 0;
+	}
+
+	.dropdown-button-content {
+		//make an animation for this
+		display: none;
+		position: absolute;
+		left: -15px;
+		z-index: 10;
+
+		a {
+			padding: 15px 20px 15px 20px;
+			background-color: $corLaranja;
+			// border-bottom: 1px solid $corCinza;
+			color: $corBranco;
+			display: block;
+
+			&:first-of-type {
+				margin-top: 5px;
+			}
+
+			&:hover {
+				background-color: $corLaranjaHover;
+			}
+
+			&:hover {
+				.dropdown-button-content {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&:hover {
+		.dropdown-button-content {
+			display: block;
+		}
 	}
 }
 
@@ -245,6 +291,40 @@ section {
 hr {
 	color: $corLaranja;
 	margin-left: 30px;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+
+	td,
+	th {
+		height: 60px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	th {
+		border-bottom: 1px solid $corCinzaClaro;
+	}
+
+	tbody {
+		tr {
+			&:nth-child(even) {
+				background-color: $corCinzaTabela;
+			}
+
+			&:last-of-type {
+				border-radius: 0px 0px 10px 10px;
+			}
+		}
+	}
+}
+
+.wrapper {
+	border: 2px solid $corCinza;
+	border-radius: 10px;
+	margin: 50px 0 50px 0;
 }
 
 .title {
