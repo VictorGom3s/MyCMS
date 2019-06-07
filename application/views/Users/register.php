@@ -2,13 +2,15 @@
 
 <section>
   <div class="container">
-      <div class="row">
-        <h3 class='title'>Usuários</h3>
-      </div>
+    <div class="row">
+      <h3 class='title'>Usuários</h3>
+    </div>
     <div class="wrapper">
-      <a href="#" >Voltar</a>
 
       <form action="">
+
+        <a href="<?= base_url('Pages/usersIndex') ?>" class="btn-return">◄ Voltar</a>
+
         <div class="labelgroup">
           <label for="nome">Nome</label>
           <input type="text" placeholder="Digite seu nome completo" name="nome">
@@ -35,6 +37,7 @@
 
         <input type="submit" class="btn-orange" value="Cadastrar">
       </form>
+
     </div>
   </div>
 </section>
