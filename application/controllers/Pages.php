@@ -7,6 +7,12 @@ class Pages extends CI_Controller{
     parent::__construct();
   }
 
+  public function login(){
+    $this->load->view('commons/header');
+    $this->load->view('login');
+    $this->load->view('commons/footer');
+  }
+
   public function usersIndex(){
     $this->load->view('commons/header');
     $this->load->view('Users/index');

@@ -7,7 +7,7 @@
     </div>
     <div class="wrapper">
 
-      <form action="">
+      <form action="" class="register">
 
         <a href="<?= base_url('Pages/usersIndex') ?>" class="btn-return">◄ Voltar</a>
 
