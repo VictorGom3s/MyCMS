@@ -1,14 +1,14 @@
 <?php $this->load->view('commons/menu'); ?>
 
-<section>
+<section class="content">
   <div class="container">
     <div class="row">
       <h3 class='title'>Usuários</h3>
-      <a href="<?=base_url('Pages/usersRegister')?>" class='btn-orange-outline'>Novo</a>
-    </div> 
+      <a href="<?= base_url('Pages/usersRegister') ?>" class='btn-orange-outline'>Novo</a>
+    </div>
 
     <div class="wrapper">
-      <table class ='table'>
+      <table class='table'>
         <thead>
           <tr>
             <th scope="col">Id</th>
@@ -76,7 +76,7 @@
             </td>
           </tr>
         </tbody>
-      </table>   
+      </table>
     </div>
   </div>
 </section>
