@@ -17,4 +17,13 @@
       <input type="submit" class="btn-rounded" value="Entrar">
     </form>
   </div>
+
+  <div class="login-footer">
+    <hr>
+    <ul>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+      <li><a href="#">Copyright</a></li>
+    </ul>
+  </div>
 </section>
