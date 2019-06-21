@@ -2,7 +2,7 @@
   <div class="login-container">
     <h1>MyCMS</h1>
 
-    <form action="" method="post" class='login-form'>
+    <form action="<?=base_url('Login/login')?>" method="post" class='login-form' enctype='multipart/form-data'> 
       <div class="labelgroup">
         <label for="email">E-mail</label>
         <input type="email" name='email' placeholder="Digite seu e-mail" class='rounded-input'>

@@ -1,6 +1,6 @@
 <?php $this->load->view('commons/menu'); ?>
 
-<section class="content" id='cards'>
+<section class="content cards">
 
   <div class="card">
     <div class="icon-holder">
