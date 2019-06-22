@@ -1,16 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pages extends CI_Controller{
+class Pages extends MY_Controller{
 
   function __construct(){
     parent::__construct();
-  }
-
-  public function login(){
-    $this->load->view('commons/header');
-    $this->load->view('login');
-    $this->load->view('commons/footer');
   }
 
   public function usersIndex(){

@@ -45,7 +45,7 @@
   <div class="footer-menu">
     <ul>
       <li>
-        <a href="">
+        <a href="<?=base_url('deslogar')?>">
           <i class="material-icons">power_settings_new</i>
           Sair
         </a>
