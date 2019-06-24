@@ -5,7 +5,7 @@ class Login extends CI_Controller{
   public function __construct()
   {
     parent::__construct();
-
+    $this->load->library('email');
     $this->load->library('session');
     $this->load->model('Usuarios_model');
 
@@ -57,6 +57,30 @@ class Login extends CI_Controller{
   }
 
   public function recoverPassword(){
+    $email = $this->input->post('email');
+    
+    $this->email->from('victorgom3s@gmail.com', 'MyCMS');
+    $this->email->to($email);
+    $this->email->subject('Sua senha está aqui!');
 
+    //gerar senha nova
+    $this->email->message('Esta é sua nova senha no sistema');
+    
+    if($email && $email != NULL){
+      if($this->email->send()){
+        echo 'E-mail enviado com sucesso. Verifique sua caixa de entrada!';
+        exit;
+      }
+      echo $this->email->print_debugger(array('headers'));
+      exit;
+    }else{
+      echo 'Erro ao enviar E-mail. Tente novamente mais tarde!';
+      exit;
+    
+
+      $this->load->view('commons/header');
+      $this->load->view('recoverPassword');
+      $this->load->view('commons/footer');
+    }
   }
 }
