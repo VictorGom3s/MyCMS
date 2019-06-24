@@ -26,7 +26,7 @@ class Login extends CI_Controller{
       $email = $post['email'];
       $senha = md5($post['senha']);
 
-      $user = $this->Usuarios_model->select($email, $senha);
+      $user = $this->Usuarios_model->selectUser($email, $senha);
       
       if($user){
         $this->session->set_userdata('logado', true);

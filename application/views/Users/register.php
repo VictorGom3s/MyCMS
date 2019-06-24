@@ -7,7 +7,9 @@
     </div>
     <div class="wrapper">
 
-      <form action="" class="register">
+      <form action="<?= base_url('Pages/usersRegister') ?>" method="post" class="register" autocomplete="off" enctype="multipart/form-data">
+        <!-- Preventing Chrome and Firefox autocomplete; -->
+        <input autocomplete="off" name="hidden" type="password" style="display:none;">
 
         <a href="<?= base_url('Pages/usersIndex') ?>" class="btn-return">◄ Voltar</a>
 
