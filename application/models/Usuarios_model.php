@@ -19,8 +19,8 @@ class Usuarios_model extends CI_Model{
     return false;
   }
 
-  function updateUser($data){
-
+  function updateUser($data, $id){
+    
   }
 
   function selectUser($email, $senha){

@@ -9,7 +9,7 @@
     </div>
     <h4>Usuários</h4>
     <p>Administrar usuários do sistema</p>
-    <a href="<?= base_url('Pages/usersIndex') ?>" class='btn-orange'>Acessar</a>
+    <a href="<?=base_url('Usuarios')?>" class='btn-orange'>Acessar</a>
   </div>
 
   <div class="card">

@@ -16,25 +16,25 @@
   <div class="menu">
     <ul>
       <li>
-        <a href="<?= base_url('Pages/usersIndex') ?>">
+        <a href="<?= base_url('Usuarios') ?>">
           <i class="material-icons">person</i>
           Usuários
         </a>
       </li>
       <li>
-        <a href="<?= base_url('Pages/') ?>">
+        <a href="<?= base_url('Usuarios/') ?>">
           <i class="material-icons">edit</i>
           Cabeçalho
         </a>
       </li>
       <li>
-        <a href="<?= base_url('Pages/') ?>">
+        <a href="<?= base_url('Usuarios/') ?>">
           <i class="material-icons">insert_drive_file</i>
           Páginas
         </a>
       </li>
       <li>
-        <a href="<?= base_url('Pages/') ?>">
+        <a href="<?= base_url('Usuarios/') ?>">
           <i class="material-icons">edit</i>
           Rodapé
         </a>
