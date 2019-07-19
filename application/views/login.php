@@ -13,7 +13,7 @@
         <input type="password" name='senha' class="rounded-input" placeholder="Digite sua senha">
       </div>
 
-      <a href="#" class="link">Recuperar senha</a>
+      <a href="<?=base_url('recuperar')?>" class="link">Recuperar senha</a>
       <input type="submit" class="btn-rounded" value="Entrar">
     </form>
   </div>

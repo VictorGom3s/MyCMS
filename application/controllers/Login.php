@@ -8,7 +8,6 @@ class Login extends CI_Controller{
     $this->load->library('email');
     $this->load->library('session');
     $this->load->model('Usuarios_model');
-
   }
 
   public function index()
@@ -56,30 +55,25 @@ class Login extends CI_Controller{
     redirect(base_url('Login/index'));
   }
 
-  public function recoverPassword(){
-    $email = $this->input->post('email');
-    
-    $this->email->from('victorgom3s@gmail.com', 'MyCMS');
-    $this->email->to($email);
-    $this->email->subject('Sua senha está aqui!');
+  public function recoverPassword(){ 
+    if($this->input->post('email') && $this->input->post('email') != NULL){
+      $email = $this->input->post('email');
 
-    //gerar senha nova
-    $this->email->message('Esta é sua nova senha no sistema');
-    
-    if($email && $email != NULL){
+      $this->email->from('victorgom3s@gmail.com', 'MyCMS');
+      $this->email->to($email);
+      $this->email->subject('Sua senha está aqui!');     
+      $newPasswd = random_password(); // New password
+      $this->email->message('Esta é sua nova senha no sistema: <b>' . $newPasswd . '</b>.');
+      
       if($this->email->send()){
         echo 'E-mail enviado com sucesso. Verifique sua caixa de entrada!';
-        exit;
+      }else{
+        echo 'Erro ao enviar E-mail. Tente novamente mais tarde!';
       }
-      echo $this->email->print_debugger(array('headers'));
-      exit;
-    }else{
-      echo 'Erro ao enviar E-mail. Tente novamente mais tarde!';
-      exit;
-    
+    }else{    
       $this->load->view('commons/header');
       $this->load->view('recoverPassword');
-      $this->load->view('commons/footer');
+      $this->load->view('commons/footer');    
     }
   }
 }
