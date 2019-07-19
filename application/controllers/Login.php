@@ -40,7 +40,7 @@ class Login extends CI_Controller{
         redirect(base_url('/'));
       }else{
         $this->session->set_flashdata("E-mail ou senha incorretos!");
-        redirect(base_url('login'));
+        redirect(base_url('Login'));
       }     
     }
   }
@@ -77,7 +77,6 @@ class Login extends CI_Controller{
       echo 'Erro ao enviar E-mail. Tente novamente mais tarde!';
       exit;
     
-
       $this->load->view('commons/header');
       $this->load->view('recoverPassword');
       $this->load->view('commons/footer');

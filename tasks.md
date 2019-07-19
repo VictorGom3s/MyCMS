@@ -1,0 +1,1 @@
+29/06 - Comecei a fazer a parte de deletar registro. Porém, cheguei a conclusão de que terei que refazer a estrutura das controllers para dividir melhor os códigos.

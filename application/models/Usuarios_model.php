@@ -9,6 +9,8 @@ class Usuarios_model extends CI_Model{
       return false;
     }
 
+    $data['created_at'] = date('Y/m/d H:m:s');
+
     if($this->db->insert('usuarios', $data)){
       echo "Usuário inserido com sucesso!";
       return true;
@@ -41,5 +43,23 @@ class Usuarios_model extends CI_Model{
     }else {
       return false;
     }
+  }
+
+  public function deleteUser($id = NULL){
+    if($id === NULL){
+      echo "Nenhum usuario especificado!";
+      exit;
+    }
+
+    if($this->db->delete('usuarios', array('id' => $id))){
+      echo "Usuário excluido com sucesso!";
+      exit;
+      return true;
+    }else{
+      echo 'Erro ao deletar user';
+      exit;
+    }
+
+    return false;
   }
 }

@@ -34,7 +34,6 @@ class Pages extends MY_Controller{
         exit;
       }
     }
-    // exit;
     $this->load->view('commons/header');
     $this->load->view('Users/register', (isset($data) && $data) ? $data : '');
     $this->load->view('commons/footer');
