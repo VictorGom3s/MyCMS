@@ -2,3 +2,13 @@
 system/
 .vscode/
 application/config/email.php
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
+/vendor/
+*/config/development
+*/logs/log-*.php
+!*/logs/index.html
+*/cache/*
+!*/cache/index.html
+!*/cache/.htaccess
