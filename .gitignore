@@ -1,3 +1,4 @@
 #Don't track content of these folders
 system/
 .vscode/
+application/config/email.php
