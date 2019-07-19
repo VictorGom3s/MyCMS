@@ -1,7 +1,7 @@
 #Don't track content of these folders
-# system/
+system/
 .vscode/
-# application/config/email.php
+application/config/email.php
 application/logs/*
 !application/logs/index.html
 !application/logs/.htaccess
