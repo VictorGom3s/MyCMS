@@ -15,12 +15,9 @@ class Usuarios extends MY_Controller{
     $this->load->view('commons/footer');
   }
 
-  public function newUser($id = NULL){
-    if($id != NULL){
-      $data['id'] = $id;
-    }
-    
-    if($this->input->post() && $id === NULL){
+  public function newUser(){
+        
+    if($this->input->post()){
       $post = $this->input->post();
       unset($post['hidden']);
       $post['senha'] = md5($post['senha']);
@@ -34,6 +31,29 @@ class Usuarios extends MY_Controller{
         exit;
       }
     }
+
+    $this->load->view('commons/header');
+    $this->load->view('Usuarios/register', (isset($data) && $data) ? $data : '');
+    $this->load->view('commons/footer');
+  }
+
+  public function updateUser($id){
+    $data = $this->Usuarios_model->selectUserByID($id);
+
+    if($this->input->post() && $data != false){
+      $post = $this->input->post();
+      $update = $this->Usuarios_model->updateUser($post, $id);
+
+      if($update){
+        echo "Dados atualizados com sucesso!";
+      }else{
+        echo "Erro ao atualizar dados do usuário";
+      }
+
+    }else if($data == false){
+      echo '<h6>Usuário não encontrado!</h6>';
+    }
+
     $this->load->view('commons/header');
     $this->load->view('Usuarios/register', (isset($data) && $data) ? $data : '');
     $this->load->view('commons/footer');
