@@ -55,3 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'Login/login';
 $route['recuperar'] = 'Login/recoverPassword';
 $route['deslogar'] = 'Login/logout';
+$route['usuarios'] = 'Usuarios';
+$route['novo'] = 'Usuarios/newUser';
+$route['editar/(:num)'] = 'Usuarios/newUser/$1';
+$route['excluir/(:num)'] = 'Usuarios/deleteUser/$1';

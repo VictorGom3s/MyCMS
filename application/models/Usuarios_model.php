@@ -25,6 +25,7 @@ class Usuarios_model extends CI_Model{
     if(!$id || $id == NULL){
       return false;
     }
+    $data['updated_at'] = date('Y/m/d H:m:s');
     
     $this->db->where('id', $id);
     if($this->db->update('usuarios', $data)){
@@ -71,21 +72,25 @@ class Usuarios_model extends CI_Model{
     return false;
   }
 
-  public function deleteUser($id = NULL){
+  function selectAllUsers(){
+    $data['users'] = $this->db->select('*')->from('usuarios')->get()->result();
+
+    if($this->db->count_all_results() > 0){
+      return $data;
+    }else{
+      return false;
+    }
+  }
+
+  public function deleteUser($id){
     if($id === NULL){
-      echo "Nenhum usuario especificado!";
-      exit;
+      return false;
     }
 
     if($this->db->delete('usuarios', array('id' => $id))){
-      echo "Usuário excluido com sucesso!";
-      exit;
       return true;
     }else{
-      echo 'Erro ao deletar user';
-      exit;
+      return false;
     }
-
-    return false;
   }
 }

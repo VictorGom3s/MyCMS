@@ -3,7 +3,7 @@
     <a href="#" class='btn-menu oculto'>
       <i class="material-icons">menu</i>
     </a>
-    <h3><a href="<?= base_url('Dashboard') ?>">MyCMS</a></h3>
+    <h3><a href="<?= base_url('/') ?>">MyCMS</a></h3>
   </div>
 
   <div class="user-holder">
@@ -16,25 +16,25 @@
   <div class="menu">
     <ul>
       <li>
-        <a href="<?= base_url('Usuarios') ?>">
+        <a href="<?= base_url('usuarios') ?>">
           <i class="material-icons">person</i>
           Usuários
         </a>
       </li>
       <li>
-        <a href="<?= base_url('Usuarios/') ?>">
+        <a href="<?= base_url('usuarios/') ?>">
           <i class="material-icons">edit</i>
           Cabeçalho
         </a>
       </li>
       <li>
-        <a href="<?= base_url('Usuarios/') ?>">
+        <a href="<?= base_url('usuarios/') ?>">
           <i class="material-icons">insert_drive_file</i>
           Páginas
         </a>
       </li>
       <li>
-        <a href="<?= base_url('Usuarios/') ?>">
+        <a href="<?= base_url('usuarios/') ?>">
           <i class="material-icons">edit</i>
           Rodapé
         </a>
