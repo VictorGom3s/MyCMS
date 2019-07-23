@@ -8,6 +8,7 @@
         <input type="email" name='email' for="email" placeholder="Digite seu e-mail" class='rounded-input'>
       </div>
 
+      <a href="<?= base_url('Login') ?>" class="btn-return">◄ Voltar</a>
       <input type="submit" class="btn-rounded" value="Enviar">
     </form>
   </div>
