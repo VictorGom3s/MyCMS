@@ -33,13 +33,11 @@ class Usuarios extends MY_Controller{
       /* Validação do formulário */
       $this->form_validation->set_rules('nome', 'Nome', 'trim|required|min_length[3]');
       $this->form_validation->set_rules('email', 'E-mail', 'trim|required|valid_email');
-      $this->form_validation->set_rules('senha', 'Senha', 'trim|required|min_length[3]');
+      $this->form_validation->set_rules('senha', 'Senha', 'trim|required|min_length[8]');
       $this->form_validation->set_rules('nivel', 'Nível', 'trim|required|in_list[adm, comum]');
-      $this->form_validation->set_error_delimiters('<div class="errors">', '</div>');
+      $this->form_validation->set_error_delimiters('<div class="alert-danger">', '</div>');
 
-      if($this->form_validation->run() == FALSE){
-        echo 'Erro ao submeter formulário !';
-      }else{      
+      if($this->form_validation->run() != FALSE){     
         $post = $this->input->post();
         unset($post['hidden']);
 
@@ -50,20 +48,20 @@ class Usuarios extends MY_Controller{
           $update = $this->Usuarios_model->updateUser($post, $id);
 
           if($update){
-            echo "Dados atualizados com sucesso!";
+            $this->session->set_flashdata('success',"Dados atualizados com sucesso!");
             redirect(base_url('editar/' . $id));
           }else{
-            echo "Erro ao atualizar dados do usuário";
+            $this->session->set_flashdata('danger', "Erro ao atualizar dados do usuário");
             redirect(base_url('editar/' . $id));
           }
         }else{
           $insert = $this->Usuarios_model->insertUser($post);
     
           if($insert){
-            echo "Registro inserido com sucesso!";
+            $this->session->set_flashdata('success',"Registro inserido com sucesso!");
             redirect(base_url('usuarios'));
           }else{
-            echo "Erro ao inserir registro!";
+            $this->session->set_flashdata('danger',"Erro ao inserir registro!");
             redirect(base_url('usuarios'));
           }
         }  

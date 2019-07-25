@@ -12,7 +12,7 @@
       <table class='table'>
         <thead>
           <tr>
-            <th scope="col">Id</th>
+            <th scope="col">ID</th>
             <th scope="col">Nome</th>
             <th scope="col">Nível</th>
             <th scope="col">Ações</th>

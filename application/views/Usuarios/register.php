@@ -1,6 +1,8 @@
 <?php $this->load->view('commons/menu'); ?>
 
 <section class="content">
+  
+
   <div class="container">
     <div class="row">
       <h3 class='title'>Usuários</h3>

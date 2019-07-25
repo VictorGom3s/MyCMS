@@ -1,4 +1,22 @@
+<?php if($this->session->flashdata()){ ?>
+  <div class="container-alert">
+    <div class="alert-success">
+      <?php
+        if($this->session->flashdata('danger')){
+          echo $this->session->flashdata('danger');
+        }else if($this->session->flashdata('success')){
+          $this->session->flashdata('success');
+        }else{
+          $this->session->flashdata('info');
+        } 
+      ?>
+      <span class='close-alert'>X</span>
+    </div>
+  </div>
+<?php } ?>
+
 <section class='login'>
+
   <div class="login-container">
     <h1>MyCMS</h1>
 

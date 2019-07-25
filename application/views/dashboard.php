@@ -1,13 +1,6 @@
 <?php $this->load->view('commons/menu'); ?>
 
 <section class="content">
-
-  <div class="container-alert">
-    <div class="alert-info">
-      <p>Usuário atualizado com sucesso</p>
-      <span class='close-alert'>X</span>
-    </div>
-  </div>
   
   <div class="cards">
     <div class="card">
