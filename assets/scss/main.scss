@@ -183,7 +183,8 @@ $corBg: #FDFDFD;
 }
 
 /* -------------------------------------------- */
-html, body{
+html,
+body {
 	height: 100%;
 	min-height: 100%;
 	background-color: $corBg;
@@ -242,6 +243,10 @@ section {
 .btn-return {
 	color: $corLaranja;
 	font-weight: bold;
+
+	&:hover {
+		color: $corLaranjaHover;
+	}
 }
 
 .btn-rounded {
@@ -252,8 +257,47 @@ section {
 	font-size: 1rem;
 	color: $corBranco;
 	cursor: pointer;
+
 	&:hover {
 		background-color: $corLaranjaHover;
+	}
+}
+
+.container-alert {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	.alert-success {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 360px;
+		max-width: 480px;
+		height: 40px;
+		text-align: center;
+		margin: 15px;
+		color: #FFF;
+		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 4px 4px rgba(0, 0, 0, 0.25);
+		background: linear-gradient(94.76deg, #119943 0%, #33CC73 100%);
+		border-radius: 5px;
+		position: relative;
+	}
+
+	.close-alert {
+		width: 22px;
+		height: 22px;
+		background-color: $corPreto;
+		border-radius: 100%;
+		padding: 1px;
+		position: absolute;
+		right: 15px;
+		font-family: 'IBM Plex Sans', sans-serif;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 19px;
+		text-align: center;
+		cursor: pointer;
 	}
 }
 
@@ -411,10 +455,11 @@ form.register {
 		input,
 		textarea,
 		select {
-			font-family: 'IBM Plex Sans' , sans-serif;
+			font-family: 'IBM Plex Sans', sans-serif;
 			font-size: 1.025rem;
 			border: 2px solid $corCinza;
 			background-color: $corBranco;
+
 			&:active,
 			&:focus {
 				border: 2px solid $corLaranja;
@@ -451,8 +496,8 @@ form.register {
 /* Menu */
 
 .content {
-	display: block;
 	float: right;
+	overflow: auto;
 }
 
 aside {
@@ -589,7 +634,7 @@ aside {
 
 .cards {
 	padding: 30px;
-	width: 70%;
+	width: 100%;
 	height: 100%;
 	min-height: 100%;
 	display: flex;
@@ -713,7 +758,9 @@ section.login {
 					padding: 5px 20px;
 					font-size: 1rem;
 					margin: 10px 0;
-					&:active, &:focus{
+
+					&:active,
+					&:focus {
 						border: 2px solid $corLaranja;
 					}
 				}
@@ -753,9 +800,10 @@ section.login {
 				a {
 					color: $corRoxoEscuro;
 					opacity: .50;
-					&:hover{
+
+					&:hover {
 						text-decoration-line: underline;
-						opacity: .9; 
+						opacity: .9;
 					}
 				}
 			}

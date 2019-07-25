@@ -9,3 +9,11 @@ if (mobile.matches) {
 } else {
   console.log("Tela maior que 768px");
 }
+
+/* Fechar alertas */
+const btnClose = document.querySelector('.close-alert');
+btnClose.addEventListener('click', closeAlert);
+
+function closeAlert() {
+  this.parentNode.parentNode.remove();
+}
