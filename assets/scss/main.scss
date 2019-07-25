@@ -268,7 +268,9 @@ section {
 	display: flex;
 	justify-content: center;
 
-	.alert-success {
+	.alert-success,
+	.alert-danger,
+	.alert-info {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -279,9 +281,20 @@ section {
 		margin: 15px;
 		color: #FFF;
 		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 4px 4px rgba(0, 0, 0, 0.25);
-		background: linear-gradient(94.76deg, #119943 0%, #33CC73 100%);
 		border-radius: 5px;
 		position: relative;
+	}
+
+	.alert-success {
+		background: linear-gradient(94.76deg, #119943 0%, #33CC73 100%);
+	}
+
+	.alert-danger {
+		background: linear-gradient(88.05deg, #CF3700 7.24%, #FF801F 105.09%);
+	}
+
+	.alert-info {
+		background: linear-gradient(94.76deg, #004173 0%, #4A7FA8 100%);
 	}
 
 	.close-alert {

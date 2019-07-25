@@ -3,7 +3,7 @@
 <section class="content">
 
   <div class="container-alert">
-    <div class="alert-success">
+    <div class="alert-info">
       <p>Usuário atualizado com sucesso</p>
       <span class='close-alert'>X</span>
     </div>
