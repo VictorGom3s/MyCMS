@@ -6,3 +6,11 @@ function random_password($length = 8) {
     $password = substr( str_shuffle( $chars ), 0, $length );
     return $password;
 }
+
+function verifyAdmin($user){
+    if($user['nivel'] == 'adm'){
+        return true;
+    }else{
+        return false;
+    }
+}

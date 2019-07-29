@@ -32,6 +32,7 @@ class Login extends CI_Controller{
         $this->session->set_userdata('email', $user->email);
         $this->session->set_userdata('senha', $user->senha);
         $this->session->set_userdata('nome', $user->nome);
+        $this->session->set_userdata('nivel', $user->nivel);
 
         $logado = $this->session->userdata('logado');
 
@@ -50,6 +51,7 @@ class Login extends CI_Controller{
       $this->session->unset_userdata('logado');
       $this->session->unset_userdata('email');
       $this->session->unset_userdata('senha');
+      $this->session->unset_userdata('nivel');
     }
 
     redirect(base_url('Login/index'));

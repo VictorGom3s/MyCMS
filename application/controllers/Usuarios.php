@@ -5,13 +5,12 @@ class Usuarios extends MY_Controller{
 
   function __construct(){
     parent::__construct();
-
     $this->load->model('Usuarios_model');
     $this->load->library("form_validation");
   }
 
   public function index(){
-    $data = $this->Usuarios_model->selectAllUsers();
+    $data = $this->Usuarios_model->selectAllUsers();    
 
     $this->load->view('commons/header');
     $this->load->view('Usuarios/index', $data);
@@ -19,6 +18,16 @@ class Usuarios extends MY_Controller{
   }
 
   public function newUser($id = NULL){
+
+    if(verifyAdmin($this->session->userdata())){
+      $isAdmin = true;
+    }else{
+      $isAdmin = false;
+    }
+    if($isAdmin == false){
+      $this->session->set_flashdata('danger', 'Você precisa ser administrador para realizar esta ação.');
+      redirect(base_url('usuarios/'));
+    }
 
     if($id != NULL){     
       /* Caso haja um ID, traz os dados do usuario */
@@ -34,7 +43,7 @@ class Usuarios extends MY_Controller{
       $this->form_validation->set_rules('nome', 'Nome', 'trim|required|min_length[3]');
       $this->form_validation->set_rules('email', 'E-mail', 'trim|required|valid_email');
       $this->form_validation->set_rules('senha', 'Senha', 'trim|required|min_length[8]');
-      $this->form_validation->set_rules('nivel', 'Nível', 'trim|required|in_list[adm, comum]');
+      $this->form_validation->set_rules('nivel', 'Nível', 'trim|required|in_list[adm,comum]');
       $this->form_validation->set_error_delimiters('<div class="alert-danger">', '</div>');
 
       if($this->form_validation->run() != FALSE){     
@@ -74,6 +83,16 @@ class Usuarios extends MY_Controller{
   }
 
   public function deleteUser($id = NULL){
+    if(verifyAdmin($this->session->userdata())){
+      $isAdmin = true;
+    }else{
+      $isAdmin = false;
+    }
+    if($isAdmin == false){
+      $this->session->set_flashdata('danger', 'Você precisa ser administrador para realizar esta ação.');
+      redirect(base_url('usuarios/'));
+    }
+
     if($id === NULL){
       echo "Usuário não encontrado!";
       exit;

@@ -39,7 +39,7 @@ class Usuarios_model extends CI_Model{
     $existe = false;
 
     if($email != NULL && $senha != NULL){
-      $query = $this->db->query("SELECT nome, email, senha FROM usuarios WHERE email = '{$email}' AND senha = '{$senha}'"); // query SQL
+      $query = $this->db->query("SELECT nome, email, senha, nivel FROM usuarios WHERE email = '{$email}' AND senha = '{$senha}'"); // query SQL
       if($query->result() != NULL){ // Se houver resultados da query anterior, verifica se as credencias batem com algum resultado
         foreach($query->result() as $row){
           if($row->email === $email && $row->senha === $senha){
