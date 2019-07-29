@@ -35,11 +35,11 @@ class Login extends CI_Controller{
 
         $logado = $this->session->userdata('logado');
 
-        $this->session->set_flashdata('success', 'Você logou como '. $user->nome . '. Bem-vindo!');
+        $this->session->set_flashdata('info', 'Olá, '. $user->nome . '. Seja bem-vindo!');
         redirect(base_url('/'));
       }else{
         $this->session->set_flashdata('danger', "E-mail ou senha incorretos!");
-        redirect(base_url('Login'), 'refresh');
+        redirect(base_url('Login'));
       }     
     }
   }

@@ -1,16 +1,17 @@
 <?php if($this->session->flashdata()){ ?>
-  <div class="container-alert">
-    <div class="alert-success">
+  <div class="container-alert">    
       <?php
-        if($this->session->flashdata('danger')){
-          echo $this->session->flashdata('danger');
-        }else if($this->session->flashdata('success')){
-          $this->session->flashdata('success');
-        }else{
-          $this->session->flashdata('info');
+        if($this->session->flashdata('danger')){?>
+          <div class="alert-danger">
+          <?php echo $this->session->flashdata('danger');
+        }else if($this->session->flashdata('success')){?>
+          <div class="alert-success">
+          <?php echo $this->session->flashdata('success');
+        }else if($this->session->flashdata('info')){?>
+          <div class="alert-info">
+          <?php echo $this->session->flashdata('info');
         } 
       ?>
-      <span class='close-alert'>X</span>
     </div>
   </div>
 <?php } ?>
