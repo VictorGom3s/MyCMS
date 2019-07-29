@@ -542,10 +542,13 @@ aside {
 
 	.menu,
 	.footer-menu {
-		padding: 30px 0px 30px 90px;
+		// padding: 30px 0px 30px 90px;
 
 		a {
+			display: block;
+			margin: 0 0 0 90px;
 			color: $corCinza;
+			width: max-content;
 
 			&:hover {
 				color: $corLaranja;
@@ -553,7 +556,10 @@ aside {
 		}
 
 		ul {
+			width: 100%;
 			list-style: none;
+			margin: 30px auto;
+			padding: 0;
 		}
 
 		i {
@@ -571,24 +577,14 @@ aside {
 	.menu {
 		li {
 			margin-bottom: 20px;
-
-			.ativo {
-				position: relative;
-				z-index: 999;
-
-				&:before {
-					content: " ";
-					background-color: $corRoxo;
-					width: 245px;
-					height: 40px;
-					position: absolute;
-					left: -90px;
-					top: -10px;
-					z-index: -1;
-				}
-			}
+			width: 75%;
 		}
 
+		.active {
+			background: linear-gradient(161.12deg, #002A52 0%, #265880 100%);
+			border-radius: 0px 5px 5px 0;
+			padding: 7px 0;
+		}
 
 	}
 
@@ -630,14 +626,11 @@ aside {
 
 			&:before {
 				content: "";
-				display: block;
-				width: 110%;
+				width: 90%;
 				background-color: $corLaranja;
 				height: 2px;
-				position: absolute;
-				top: -30px;
-				left: -40px;
-
+				margin-bottom: 30px;
+				float: right;
 			}
 		}
 	}

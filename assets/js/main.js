@@ -27,3 +27,5 @@ function closeAlert() {
 		}
 	}, 30);
 }
+
+/*  */
