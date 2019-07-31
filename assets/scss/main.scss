@@ -107,8 +107,6 @@ a {
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
 
-
-
 h3,
 h4,
 h5,
@@ -158,7 +156,7 @@ p {
 
 /* ------------------------------- Colors -----------------------------------------*/
 $corPreto: #000;
-$corRoxoEscuro: #0B0910;
+$corRoxoEscuro: #0b0910;
 $corBranco: #fff;
 
 $corLaranja: #cc3619;
@@ -170,9 +168,9 @@ $corBordo: #55283d;
 $corRoxo: #2d194e;
 $corAzul: #1738d5;
 $corCinzaClaro: #d8d9dc;
-$corCinzaTabela:#f6f6f6;
+$corCinzaTabela: #f6f6f6;
 
-$corBg: #FDFDFD;
+$corBg: #fdfdfd;
 /* --------------------------------------------------------------- */
 
 /* ------------------- Mixins ---------------- */
@@ -282,7 +280,7 @@ section {
 	height: 40px;
 	text-align: center;
 	margin: 15px 0;
-	color: #FFF;
+	color: #fff;
 	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 5px;
 	position: relative;
@@ -290,15 +288,15 @@ section {
 }
 
 .alert-success {
-	background: linear-gradient(94.76deg, #119943 0%, #33CC73 100%);
+	background: linear-gradient(94.76deg, #119943 0%, #33cc73 100%);
 }
 
 .alert-danger {
-	background: linear-gradient(88.05deg, #CF3700 7.24%, #FF801F 105.09%);
+	background: linear-gradient(88.05deg, #cf3700 7.24%, #ff801f 105.09%);
 }
 
 .alert-info {
-	background: linear-gradient(94.76deg, #004173 0%, #4A7FA8 100%);
+	background: linear-gradient(94.76deg, #004173 0%, #4a7fa8 100%);
 }
 
 .close-alert {
@@ -576,16 +574,15 @@ aside {
 
 	.menu {
 		li {
-			margin-bottom: 20px;
+			margin-bottom: 25px;
 			width: 75%;
 		}
 
 		.active {
-			background: linear-gradient(161.12deg, #002A52 0%, #265880 100%);
+			background: linear-gradient(161.12deg, #002a52 0%, #265880 100%);
 			border-radius: 0px 5px 5px 0;
 			padding: 7px 0;
 		}
-
 	}
 
 	.head-menu {
@@ -602,7 +599,6 @@ aside {
 		}
 	}
 
-
 	.user-holder {
 		margin-top: 40px;
 		margin-bottom: 40px;
@@ -614,8 +610,6 @@ aside {
 	}
 
 	.footer-menu {
-
-		// bottom: 0;
 		flex-grow: 2;
 		display: flex;
 		justify-content: flex-end;
@@ -692,12 +686,11 @@ aside {
 	}
 }
 
-
 /* 
  Mobile
  */
 
-@media(max-width: "768px") {
+@media (max-width: "768px") {
 	html {
 		font-size: 14px;
 	}
@@ -713,9 +706,7 @@ aside {
 			i {
 				margin-right: 5px;
 			}
-
 		}
-
 	}
 
 	#cards {
@@ -783,7 +774,6 @@ section.login {
 			.btn-rounded {
 				float: right;
 			}
-
 		}
 	}
 

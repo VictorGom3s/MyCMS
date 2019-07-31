@@ -1,15 +1,3 @@
-/*
-  Verificando se o user-agent é mobile
-*/
-
-const mobile = window.matchMedia('(max-width: 768px)');
-
-if (mobile.matches) {
-	console.log('Tela menor que 768px');
-} else {
-	console.log('Tela maior que 768px');
-}
-
 /* Fechar alertas */
 const btnClose = document.querySelector('.close-alert');
 if (btnClose != null) {
@@ -28,4 +16,21 @@ function closeAlert() {
 	}, 30);
 }
 
-/*  */
+/* Menu active */
+
+function addActive() {
+	const link = document.querySelectorAll('.menu ul li');
+	link.forEach((item) => {
+		if (item.classList.contains('active')) {
+			item.classList.add('active');
+		};
+		const currentPage = window.location.href;
+		const link = item.querySelector('a').getAttribute('href');
+
+		if (link == currentPage) {
+			item.classList.add('active');
+		}
+	});
+}
+
+addActive();

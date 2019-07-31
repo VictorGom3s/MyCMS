@@ -15,26 +15,26 @@
   <hr>
   <div class="menu">
     <ul>
-      <li id='usuarios' class='active'>
+      <li class=''>
         <a href="<?= base_url('usuarios') ?>">
           <i class="material-icons">person</i>
           Usuários
         </a>
       </li>
       <li>
-        <a href="<?= base_url('/') ?>">
+        <a href="<?= base_url('cabecalho') ?>">
           <i class="material-icons">edit</i>
           Cabeçalho
         </a>
       </li>
       <li>
-        <a href="<?= base_url('/') ?>">
+        <a href="<?= base_url('paginas') ?>">
           <i class="material-icons">insert_drive_file</i>
           Páginas
         </a>
       </li>
       <li>
-        <a href="<?= base_url('/') ?>">
+        <a href="<?= base_url('rodape') ?>">
           <i class="material-icons">edit</i>
           Rodapé
         </a>
